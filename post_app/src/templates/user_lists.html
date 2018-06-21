@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es" dir="LTR">
+
+    <head>
+        <title>New user</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    </head>
+    <body>
+        <h1> Users</h1>
+        {% for user in users %}
+            <p> id: {{ user.id }}</p>
+            <p> name: {{ user.name }}</p>
+            <p> email: {{ user.email }}</p>
+        {% endfor %}
+    </body>
+</html>
