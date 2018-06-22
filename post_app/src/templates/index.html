@@ -7,6 +7,14 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     </head>
 
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name(size=20) }}
+        {{ form.email.label }} {{ form.email(size=255) }}
+        <p>{{ form.submit() }}</p>
+    </form>
+    
+
     <body>
         <h1> New user</h1>
         <p> id: {{ id }}</p>

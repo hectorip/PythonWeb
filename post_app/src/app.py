@@ -3,6 +3,7 @@ from flask import Flask, render_template
 #importamos librería de sqlalchemy
 from flask_sqlalchemy import SQLAlchemy
 
+
 app = Flask(__name__)
 
 #establecemos cadena de conexión con la base de datos
@@ -32,6 +33,7 @@ class Post(db.Model):
         return '<Post %r>' % self.title
 
 db.create_all()
+
 
 @app.route('/')
 def index():
